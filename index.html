@@ -1,407 +1,489 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="favi.png" type="image/x-icon">
-    <title>Porty i złącza w komputerze i urządzeniach elektronicznych</title>
+  <script language="JavaScript">
+    <!--
+    var TRange = null;
+
+    function findString(str) {
+      if (parseInt(navigator.appVersion) < 4) return;
+      var strFound;
+      if (window.find) {
+
+        // CODE FOR BROWSERS THAT SUPPORT window.find
+        strFound = self.find(str);
+        if (strFound && self.getSelection && !self.getSelection().anchorNode) {
+          strFound = self.find(str)
+        }
+        if (!strFound) {
+          strFound = self.find(str, 0, 1)
+          while (self.find(str, 0, 1)) continue
+        }
+      } else if (navigator.appName.indexOf("Microsoft") != -1) {
+
+        // EXPLORER-SPECIFIC CODE
+
+        if (TRange != null) {
+          TRange.collapse(false)
+          strFound = TRange.findText(str)
+          if (strFound) TRange.select()
+        }
+        if (TRange == null || strFound == 0) {
+          TRange = self.document.body.createTextRange()
+          strFound = TRange.findText(str)
+          if (strFound) TRange.select()
+        }
+      } else if (navigator.appName == "Opera") {
+        alert("Opera browsers not supported, sorry...")
+        return;
+      }
+      if (!strFound) alert("String '" + str + "' not found!")
+      return;
+    }
+    //
+    -->
+  </script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="favi.png" type="image/x-icon">
+  <title>Porty i złącza w komputerze i urządzeniach elektronicznych</title>
 </head>
+
 <body>
-    <header class="p-3 bg-dark text-white">
-        <div class="container">
-          <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 naglowek">
-              <li><a href="#" class="nav-link px-2 text-white"><i class="bi bi-usb-plug"></i>Porty i złącza w komputerze i urządzeniach elektronicznych</a></li>
-              <!-- <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
+  <header class="p-3 bg-dark text-white">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0 naglowek">
+          <li><a href="#" class="nav-link px-2 text-white"><i class="bi bi-usb-plug"></i>Porty i złącza w komputerze i
+              urządzeniach elektronicznych</a></li>
+          <!-- <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
               <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
               <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
               <li><a href="#" class="nav-link px-2 text-white">About</a></li> -->
-            </ul>
-    
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-              <input type="search" class="form-control form-control-dark text-white bg-dark" placeholder="Search..." aria-label="Search">
-            </form>
-    
-            <!-- <div class="text-end">
+        </ul>
+
+        <form name="f2" action=""
+          onSubmit="if(this.t1.value!=null && this.t1.value!='') findString(this.t1.value);return false" class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <input type="search" name=t1 value="" size=20 class="form-control form-control-dark text-white bg-dark"
+            placeholder="Search..." aria-label="Search">
+
+          <!-- <div class="text-end">
               <button type="button" class="btn btn-outline-light me-2">Login</button>
               <button type="button" class="btn btn-warning">Sign-up</button>
             </div> -->
-          </div>
-        </div>
-      </header>
+      </div>
     </div>
-    <div class="picture">
-        <h1>Porty i złącza</h1>
-    </div>
-    <div class="note1">
-        <p>Porty i złącza </p>
-    </div>
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </header>
+  </div>
+  <div class="picture">
+    <h1>Porty i złącza</h1>
+  </div>
+  <div class="note1">
+    <p>Porty i złącza </p>
+  </div>
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="1-meskie.png" alt=""></div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
+      <div class="my-3 py-3">
+        <h2 class="display-5">IEC C14 10A</h2>
+        <p class="lead2">Złącze C14 firmy RS PRO to wytrzymałe, bezpieczne i Durable do wielu zastosowań wymagających
+          złącza wtykowego zgodnego z normą IEC C14, takiego jak komputery biurkowe, monitory lub drukarki. Oprócz
+          sprzętu biurowego tego typu wtyczki są powszechnie stosowane do zasilania wszystkich profesjonalnych urządzeń
+          fotograficznych/wideo i audio.
+          Ten wariant wtyczki IEC C14 jest wyposażony w złącze wlotowe z możliwością ponownego podłączenia kabla z
+          korpusem nylonowym-6.</p>
       </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
-        <div class="my-3 py-3">
-          <h2 class="display-5">IEC C14 10A</h2>
-          <p class="lead2">Złącze C14 firmy RS PRO to wytrzymałe, bezpieczne i Durable do wielu zastosowań wymagających złącza wtykowego zgodnego z normą IEC C14, takiego jak komputery biurkowe, monitory lub drukarki. Oprócz sprzętu biurowego tego typu wtyczki są powszechnie stosowane do zasilania wszystkich profesjonalnych urządzeń fotograficznych/wideo i audio.
-            Ten wariant wtyczki IEC C14 jest wyposażony w złącze wlotowe z możliwością ponownego podłączenia kabla z korpusem nylonowym-6.</p>
-        </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
       </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="1-zenskie.png" alt="">
-        </div>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </div>
+  <!-- Koniec podpunktow -->
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="2-meskie.png" alt=""></div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
+      <div class="my-3 py-3">
+        <h2 class="display-5">cloverleaf</h2>
+        <p class="lead2">Kabel zasilający ze złączem „cloverleaf", który
+          pasuje do zasilania większości laptopów. Kabel
+          łączy źródło zasilania do gniazda zasilania, zasilając
+          w ten sposób laptopa.</p>
       </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
-        <div class="my-3 py-3">
-          <h2 class="display-5">cloverleaf</h2>
-          <p class="lead2">Kabel zasilający ze złączem „cloverleaf", który
-            pasuje do zasilania większości laptopów. Kabel
-            łączy źródło zasilania do gniazda zasilania, zasilając
-            w ten sposób laptopa.</p>
-        </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
       </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="2-zenskie.png" alt="">
-        </div>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </div>
+  <!-- Koniec podpunktow -->
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="3-meskie.png" alt=""></div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
+      <div class="my-3 py-3">
+        <h2 class="display-5">figure of 8</h2>
+        <p class="lead2">Nieodnawialne, w pełni formowane. Wtyczka brytyjska do standardowej figury 8 typu. Przewody
+          przyłączeniowe do urządzeń sieciowych/akumulatorowych. Wtyczka posiada zintegrowany bezpiecznik 3A.
+          Wyprodukowano z 2-rdzeniowego kabla o grubości 0,75 mm2. Napięcie 3 A przy 240 V AC. Typ złącza A: wtyczka
+          sieciowa, Wielka Brytania. Typ złącza B: IEC 60320 C7.</p>
       </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
-        <div class="my-3 py-3">
-          <h2 class="display-5">figure of 8</h2>
-          <p class="lead2">Nieodnawialne, w pełni formowane. Wtyczka brytyjska do standardowej figury 8 typu. Przewody przyłączeniowe do urządzeń sieciowych/akumulatorowych. Wtyczka posiada zintegrowany bezpiecznik 3A. Wyprodukowano z 2-rdzeniowego kabla o grubości 0,75 mm2. Napięcie 3 A przy 240 V AC. Typ złącza A: wtyczka sieciowa, Wielka Brytania. Typ złącza B: IEC 60320 C7.</p>
-        </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
       </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="3-zenskie.png" alt="">
-        </div>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </div>
+  <!-- Koniec podpunktow -->
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="4-meskie.png" alt=""></div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
+      <div class="my-3 py-3">
+        <h2 class="display-5">PS/2 filotowe dla klawiatury </h2>
+        <p class="lead2">Port komunikacyjny opracowany przez firmę IBM. Jest on odmianą portu szeregowego przeznaczoną
+          do podłączania klawiatury.</p>
       </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
-        <div class="my-3 py-3">
-          <h2 class="display-5">PS/2 filotowe dla klawiatury </h2>
-          <p class="lead2">Port komunikacyjny opracowany przez firmę IBM. Jest on odmianą portu szeregowego przeznaczoną do podłączania klawiatury.</p>
-        </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
       </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="4-zenskie.png" alt="">
-        </div>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </div>
+  <!-- Koniec podpunktow -->
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="5-meskie.png" alt=""></div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
+      <div class="my-3 py-3">
+        <h2 class="display-5">PS/2 dla myszy </h2>
+        <p class="lead2">Port komunikacyjny opracowany przez firmę IBM. Jest on odmianą portu szeregowego przeznaczoną
+          do podłączania myszy.</p>
       </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
-        <div class="my-3 py-3">
-          <h2 class="display-5">PS/2 dla myszy </h2>
-          <p class="lead2">Port komunikacyjny opracowany przez firmę IBM. Jest on odmianą portu szeregowego przeznaczoną do podłączania myszy.</p>
-        </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
       </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="5-zenskie.png" alt="">
-        </div>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </div>
+  <!-- Koniec podpunktow -->
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="6-meskie.png" alt=""></div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
+      <div class="my-3 py-3">
+        <h2 class="display-5">PS/2 dual port </h2>
+        <p class="lead2">Port komunikacyjny dla klawiatury lub myszy (kolor fioletowo-zielony).</p>
       </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
-        <div class="my-3 py-3">
-          <h2 class="display-5">PS/2 dual port </h2>
-          <p class="lead2">Port komunikacyjny dla klawiatury lub myszy (kolor fioletowo-zielony).</p>
-        </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
       </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="6-zenskie.png" alt="">
-        </div>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </div>
+  <!-- Koniec podpunktow -->
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="7-meskie.png" alt=""></div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
+      <div class="my-3 py-3">
+        <h2 class="display-5">D-sub typu DE-15F </h2>
+        <p class="lead2">D-Sub to pewien typ złącza. Litera D wzięła się stąd, że opisywane wejście przypomina ją
+          kształtem. Do D-Sub zaliczają się zarówno wtyki, jak i gniazda, ponieważ ideą tego rozwiązania jest łączenie
+          różnych urządzeń elektronicznych ze sobą i ich wzajemna komunikacja.</p>
       </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
-        <div class="my-3 py-3">
-          <h2 class="display-5">D-sub typu DE-15F </h2>
-          <p class="lead2">D-Sub to pewien typ złącza. Litera D wzięła się stąd, że opisywane wejście przypomina ją kształtem. Do D-Sub zaliczają się zarówno wtyki, jak i gniazda, ponieważ ideą tego rozwiązania jest łączenie różnych urządzeń elektronicznych ze sobą i ich wzajemna komunikacja.</p>
-        </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
       </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="7-zenskie.png" alt="">
-        </div>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </div>
+  <!-- Koniec podpunktow -->
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="8-meskie.png" alt=""></div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
+      <div class="my-3 py-3">
+        <h2 class="display-5">DVI </h2>
+        <p class="lead2">Digital Visual Interface (DVI) – standard złącza pomiędzy kartą graficzną a monitorem
+          komputera. Pojawił się w komputerach w 1999 roku. Standard Digital Visual Interface został zaprojektowany
+          przez grupę Digital Display Working Group (DDWG).</p>
       </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white">
-        <div class="my-3 py-3">
-          <h2 class="display-5">DVI </h2>
-          <p class="lead2">Digital Visual Interface (DVI) – standard złącza pomiędzy kartą graficzną a monitorem komputera. Pojawił się w komputerach w 1999 roku.  Standard Digital Visual Interface został zaprojektowany przez grupę Digital Display Working Group (DDWG).</p>
-        </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
       </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="8-zenskie.png" alt="">
-        </div>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </div>
+  <!-- Koniec podpunktow -->
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="9-meskie.png" alt=""></div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white opis">
+      <div class="my-3 py-3">
+        <h2 class="display-5">DVI-A</h2>
+        <p class="lead2">Kabel typu DVI-A potrafi przesyłać jedynie sygnały analogowe. Dzięki takiemu kablowi możliwe
+          jest podłączenie monitora CRT (lub starszego LCD) do karty graficznej, która posiada oczywiście odpowiednie
+          wejście. W przypadku użycia takiego złącza zachodzi potrzeba podwójnej konwersji sygnału tak jak w przypadku
+          kabla D-SUB. Zaleca się więc wykorzystywanie kabli DVI-D/I zamiast DVI-A.</p>
       </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white opis">
-        <div class="my-3 py-3">
-          <h2 class="display-5">DVI-A</h2>
-          <p class="lead2">Kabel typu DVI-A potrafi przesyłać jedynie sygnały analogowe. Dzięki takiemu kablowi możliwe jest podłączenie monitora CRT (lub starszego LCD) do karty graficznej, która posiada oczywiście odpowiednie wejście. W przypadku użycia takiego złącza zachodzi potrzeba podwójnej konwersji sygnału tak jak w przypadku kabla D-SUB. Zaleca się więc wykorzystywanie kabli DVI-D/I zamiast DVI-A.</p>
-        </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
       </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="9-zenskie.png" alt="">
-        </div>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </div>
+  <!-- Koniec podpunktow -->
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="10-meskie.png" alt=""></div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white opis">
+      <div class="my-3 py-3">
+        <h2 class="display-5">DVI-I (single link)</h2>
+        <p class="lead2">Złącza DVI-I single-link mają 23 styki (18+5). Złącza DVI-I nie konwertują sygnałów analogowych
+          i cyfrowych, ale mogą akceptować sygnały cyfrowe lub analogowe – ale nie oba jednocześnie. Jeśli karta
+          graficzna, monitor i kabel mają złącza DVI-I z możliwością obsługi zarówno sygnałów analogowych, jak i
+          cyfrowych, należy wybrać jeden tryb działania. Zgodnie ze swoim przeznaczeniem złącza DVI-I będą działać ze
+          wszystkimi trzema typami kabli DVI. Jednak męski kabel DVI-I nie pasuje do żeńskiego złącza DVI-D ze względu
+          na dodatkowe piny analogowe. Dlatego biorąc pod uwagę rzadkość występowania złącza DVI-A, kabel DVI-D jest
+          najczęściej stosowanym spośród trzech typów kabli. Obsługuje rozdzielczości do 1920 x 1080 przy 60 Hz. Każde
+          łącze ma trzy kanały danych dla informacji RGB o maksymalnej szerokości pasma 165 MHz, co odpowiada 165
+          milionom pikseli na sekundę. Wykorzystuje 12 z 24 pinów. Jest to więcej niż wystarczające dla większości
+          telewizorów plazmowych. </p>
       </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white opis">
-        <div class="my-3 py-3">
-          <h2 class="display-5">DVI-I (single link)</h2>
-          <p class="lead2">Złącza DVI-I single-link mają 23 styki (18+5). Złącza DVI-I nie konwertują sygnałów analogowych i cyfrowych, ale mogą akceptować sygnały cyfrowe lub analogowe – ale nie oba jednocześnie. Jeśli karta graficzna, monitor i kabel mają złącza DVI-I z możliwością obsługi zarówno sygnałów analogowych, jak i cyfrowych, należy wybrać jeden tryb działania. Zgodnie ze swoim przeznaczeniem złącza DVI-I będą działać ze wszystkimi trzema typami kabli DVI. Jednak męski kabel DVI-I nie pasuje do żeńskiego złącza DVI-D ze względu na dodatkowe piny analogowe. Dlatego biorąc pod uwagę rzadkość występowania złącza DVI-A, kabel DVI-D jest najczęściej stosowanym spośród trzech typów kabli. Obsługuje rozdzielczości do 1920 x 1080 przy 60 Hz. Każde łącze ma trzy kanały danych dla informacji RGB o maksymalnej szerokości pasma 165 MHz, co odpowiada 165 milionom pikseli na sekundę. Wykorzystuje 12 z 24 pinów. Jest to więcej niż wystarczające dla większości telewizorów plazmowych. </p>
-        </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
       </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="10-zenskie.png" alt="">
-        </div>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </div>
+  <!-- Koniec podpunktow -->
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="11-meskie.png" alt=""></div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white opis">
+      <div class="my-3 py-3">
+        <h2 class="display-5">DVI-I (dual link)</h2>
+        <p class="lead2">Złącza DVI-I dual-link mają 29 pinów (24+5). Obsługuje rozdzielczości do 2048 x 1536 przy 60
+          Hz. Każde łącze ma trzy kanały danych dla informacji RGB o maksymalnej szerokości pasma 165 MHz, co odpowiada
+          165 milionom pikseli na sekundę. Wykorzystuje wszystkie 24 piny.</p>
       </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white opis">
-        <div class="my-3 py-3">
-          <h2 class="display-5">DVI-I (dual link)</h2>
-          <p class="lead2">Złącza DVI-I dual-link mają 29 pinów (24+5). Obsługuje rozdzielczości do 2048 x 1536 przy 60 Hz. Każde łącze ma trzy kanały danych dla informacji RGB o maksymalnej szerokości pasma 165 MHz, co odpowiada 165 milionom pikseli na sekundę. Wykorzystuje wszystkie 24 piny.</p>
-        </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
       </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="11-zenskie.png" alt="">
-        </div>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </div>
+  <!-- Koniec podpunktow -->
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="12-meskie.png" alt=""></div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white opis">
+      <div class="my-3 py-3">
+        <h2 class="display-5">DVI-D (single link)</h2>
+        <p class="lead2"></p>
       </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white opis">
-        <div class="my-3 py-3">
-          <h2 class="display-5">DVI-D (single link)</h2>
-          <p class="lead2"></p>
-        </div>
+    </div>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
       </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="12-zenskie.png" alt="">
-        </div>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <!-- Podpunkty -->
-    <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 p-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze męskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+  </div>
+  <!-- Koniec podpunktow -->
+  <!-- Podpunkty -->
+  <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3 podpunkty">
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 p-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze męskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
         <img src="13-meskie.png" alt=""></div>
-      </div>
-      <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white opis">
-        <div class="my-3 py-3">
-          <h2 class="display-5">DVI-D (dual link)</h2>
-          <p class="lead2"></p>
-        </div>
-      </div>
-      <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
-        <div class="my-3 py-3">
-          <h2 class="display-5"></h2>
-          <p class="lead">złącze żeńskie</p>
-        </div>
-        <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
-        <img src="13-zenskie.png" alt="">
-        </div>
+    </div>
+    <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden text-white opis">
+      <div class="my-3 py-3">
+        <h2 class="display-5">DVI-D (dual link)</h2>
+        <p class="lead2"></p>
       </div>
     </div>
-    <!-- Koniec podpunktow -->
-    <br><br><br><br><br>
-    <footer class="py-3 my-4">
-        <p class="border-bottom pb-3 mb-3 text-center text-muted">Nie kopiować!</p>
-        <p class="text-center text-muted">Wszelkie prawa zastrzeżone ©</p>
-      </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+      <div class="my-3 py-3">
+        <h2 class="display-5"></h2>
+        <p class="lead">złącze żeńskie</p>
+      </div>
+      <div class="bg-body shadow-sm mx-auto" style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;">
+        <img src="13-zenskie.png" alt="">
+      </div>
+    </div>
+  </div>
+  <!-- Koniec podpunktow -->
+  <br><br><br><br><br>
+  <footer class="py-3 my-4">
+    <p class="border-bottom pb-3 mb-3 text-center text-muted">Nie kopiować!</p>
+    <p class="text-center text-muted">Wszelkie prawa zastrzeżone ©</p>
+  </footer>
+  </form>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
 </body>
+
 </html>

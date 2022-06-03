@@ -104,6 +104,11 @@ form {
     /* background-attachment: fixed; */
 }
 
+input:focus {
+    outline: none !important;
+    border-color: yellow !important;
+}
+
 
 @media (max-width: 1100px) {
     .picture h1 {
